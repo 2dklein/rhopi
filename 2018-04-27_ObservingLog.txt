@@ -1,0 +1,4 @@
+2018-04-27 15:55:35 - GET Named Star | Sulafat | HA: -14:11:23.69
+2018-04-27 15:55:43 - Track Object | Sulafat | Tracking Started
+2018-04-27 15:55:59 - GET Named Star | Sulafat | HA: -14:10:59.62
+2018-04-27 15:56:02 - GET Planet/Moon | Pluto | HA: -14:43:07.31

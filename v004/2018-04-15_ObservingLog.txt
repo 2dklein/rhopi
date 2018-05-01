@@ -1,0 +1,64 @@
+2018-04-15 19:51:37 - Object Search | Quetzlcoatl | HA: 6:54:38.47
+2018-04-15 19:51:42 - Object Search | Rasalgethi | HA: -9:17:47.77
+2018-04-15 19:51:43 - Track Object | Rasalgethi | Tracking Started
+2018-04-15 19:51:43 - Track Object | Rasalgethi | Tracking Stopped
+2018-04-15 19:51:44 - Object Search | Rasalgethi | HA: -9:17:45.77
+2018-04-15 19:51:45 - Object Search | Regulus | HA: -2:11:36.41
+2018-04-15 19:51:49 - Object Search | Uranus | HA: 6:11:44.53
+2018-04-15 19:51:52 - Track Object | Uranus | Tracking Started
+2018-04-15 19:51:54 - Track Object | Uranus | Tracking Stopped
+2018-04-15 19:51:55 - Object Search | Uranus | HA: 6:11:50.55
+2018-04-15 19:59:37 - Named Star Search | Regulus | HA: -2:03:43.12
+2018-04-15 19:59:42 - Planet/Moon Search | Pluto | HA: -11:26:04.21
+2018-04-15 19:59:55 - User Object Search | Gamma Draconis | HA: -9:51:06.85
+2018-04-15 20:00:14 - Track Object | Gamma Draconis | Tracking Started
+2018-04-15 20:00:32 - Track Object | Gamma Draconis | Tracking Stopped
+2018-04-15 20:00:32 - User Object Search | Gamma Draconis | HA: -9:50:29.75
+2018-04-15 20:00:50 - Custom Search | Test | RA: 12 12 12 | DEC: 21 21 21
+2018-04-15 20:03:06 - Custom Search | Test2 | RA: 12 12 12 | DEC: 13 13 13
+2018-04-15 20:03:06 - Custom Object Search | Test2 | HA: -4:04:01.09
+2018-04-15 20:03:55 - Track Object | Test2 | Tracking Started
+2018-04-15 20:03:55 - Track Object | Test2 | Tracking Stopped
+2018-04-15 20:03:58 - Track Object | Test2 | Tracking Started
+2018-04-15 20:04:01 - Track Object | Test2 | Tracking Stopped
+2018-04-15 20:04:06 - Custom Search | Test2 | RA: 12 12 12 | DEC: 13 13 13
+2018-04-15 20:04:06 - Custom Object Search | Test2 | HA: -4:03:00.93
+2018-04-15 20:04:13 - Track Object | Test2 | Tracking Started
+2018-04-15 20:05:09 - Custom Search | test | RA:    | DEC:   
+2018-04-15 20:05:17 - Custom Search | test | RA: 1 1 1 | DEC: 1 1 
+2018-04-15 20:05:18 - Custom Search | test | RA: 1 1 1 | DEC: 1 1 1
+2018-04-15 20:05:18 - Custom Object Search | test | HA: 7:09:24.20
+2018-04-15 20:05:21 - Track Object | test | Tracking Started
+2018-04-15 20:05:29 - Track Object | test | Tracking Stopped
+2018-04-15 20:05:34 - Track Object | test | Tracking Started
+2018-04-15 20:05:37 - Custom Search | test | RA: 1 1 1 | DEC: 1 1 1
+2018-04-15 20:05:38 - Track Object | test | Tracking Stopped
+2018-04-15 20:05:39 - Custom Object Search | test | HA: 7:09:45.26
+2018-04-15 20:05:41 - Track Object | test | Tracking Started
+2018-04-15 20:05:43 - Custom Search | test | RA: 1 1 1 | DEC: 1 1 1
+2018-04-15 20:31:31 - Named Star Search | Betelgeuse | HA: 2:41:28.50
+2018-04-15 20:31:35 - Track Object | Betelgeuse | Tracking Started
+2018-04-15 20:32:16 - Track Object | Betelgeuse | Tracking Stopped
+2018-04-15 20:32:16 - Named Star Search | Betelgeuse | HA: 2:42:13.63
+2018-04-15 20:32:36 - Custom Search | April's Star | RA: 12 12 12 | DEC: 23 23 23
+2018-04-15 20:32:36 - Custom Object Search | April's Star | HA: -3:34:25.98
+2018-04-15 20:33:53 - Custom Search | April's Star | RA: 12 12 12 | DEC: 23 23 23
+2018-04-15 20:33:53 - Custom Object Search | April's Star | HA: -3:33:09.77
+2018-04-15 20:33:53 - Track Object | April's Star | Tracking Started
+2018-04-15 20:33:54 - Custom Search | April's Star | RA: 12 12 12 | DEC: 23 23 23
+2018-04-15 20:33:56 - Track Object | April's Star | Tracking Stopped
+2018-04-15 20:33:57 - Custom Object Search | April's Star | HA: -3:33:04.76
+2018-04-15 20:33:57 - User Object Search | April's Star | HA: -3:33:04.76
+2018-04-15 20:34:42 - User Object Search | Gamma Draconis | HA: -9:16:14.14
+2018-04-15 20:34:48 - Planet/Moon Search | Ganymede | HA: -6:35:02.95
+2018-04-15 20:34:53 - Planet/Moon Search | Pluto | HA: -10:50:47.45
+2018-04-15 20:34:55 - Track Object | Pluto | Tracking Started
+2018-04-15 20:35:05 - Planet/Moon Search | Pluto | HA: -10:50:35.42
+2018-04-15 20:35:13 - Named Star Search | Tarazed | HA: -11:05:47.61
+2018-04-15 20:35:14 - Track Object | Tarazed | Tracking Started
+2018-04-15 20:35:34 - Track Object | Tarazed | Tracking Stopped
+2018-04-15 20:35:34 - Named Star Search | Tarazed | HA: -11:05:26.55
+2018-04-15 20:35:39 - Track Object | Tarazed | Tracking Started
+2018-04-15 20:35:43 - Named Star Search | Tarazed | HA: -11:05:17.52
+2018-04-15 20:35:53 - Custom Search | April's Star | RA: 12 12 12 | DEC: 23 23 23
+2018-04-15 20:35:53 - Custom Object Search | April's Star | HA: -3:31:08.44
