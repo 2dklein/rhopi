@@ -1,0 +1,3 @@
+2018-05-01 13:40:14 - GET Named Star | Regulus | HA: -7:21:03.38
+2018-05-01 13:40:17 - Track Object | Regulus | Tracking Started
+2018-05-01 13:40:19 - Aligned | Regulus | RA: 10:09:20.43 | DEC: 11:52:37.1

@@ -2,18 +2,19 @@ import ephem, datetime, time, tkMessageBox
 import Tkinter as tk
 
 
-def save_db(root, name_t, ra_t, dec_t):
+# Save to database file function
+def save_db(root, name_t, ra_t, dec_t):  # root is base window that it belongs to.. weird tkinter thing
 
-    def change_dropdown(subtype, spec):
+    def change_dropdown(subtype, spec):  # Object type dropdown selection
         subtype_val.set(subtype[obj_type.get()])
-        chars = set('TBDSV')
+        chars = set('TBDSV')  # If the dropdown displays one of these star types...
         if any((c in chars) for c in subtype_val.get()):
-            spec.config(state='normal')
+            spec.config(state='normal')  # ... spectral class is enabled
         else:
-            spec.delete(0, 'end')
-            spec['state'] = 'disabled'
+            spec.delete(0, 'end')  # ... otherwise, clear out spectral class box
+            spec['state'] = 'disabled'  # Spectral class is disabled
 
-    def validate(value, ii):
+    def validate(value, ii):  # Same validate function as before
         if len(value) > int(ii):
             return False
         return True
@@ -32,19 +33,18 @@ def save_db(root, name_t, ra_t, dec_t):
         # Verify all entries and set errors messages if there's a problem
         errors = [name_err, ra_err, dec_err, mag_err, spec_err]
         try:
-            if not bool(name.get().strip()):
+            if not bool(name.get().strip()):  # Check if name has usable text (aka not blank)
                 raise Exception
             with open('objects.txt', 'r') as f:
-                line = f.readlines()
-                user_objs = [l.split(',') for l in line]
+                line = f.readlines()  # Read each line of objects.txt
+                user_objs = [l.split(',') for l in line]  # Create list of objects
                 # Check user objects for object with the same name
                 for object in user_objs:
-                    if name.get().lower() == object[0].lower():
-                        raise Exception
-                        break
+                    if name.get().lower() == object[0].lower():  # Object[0] is the name
+                        raise Exception  # If you are trying to add a duplicate object, flag as error
         except:
-            name_err.set('Name cannot be blank or match an existing user object!')
-            name['bg'] = 'pink'
+            name_err.set('Name cannot be blank or match an existing user object!')  # Here's the error
+            name['bg'] = 'pink'  # Mark box with error in pink
         for ra in ra_t:
             try:
                 float(ra.get())
@@ -66,10 +66,10 @@ def save_db(root, name_t, ra_t, dec_t):
         if spec['state'] == 'normal':
             try:
                 spec_test = str(spec.get())
-                chars = 'OBAFGKMobafgkm'
+                chars = 'OBAFGKMobafgkm'  # One of these characters should be first
                 if not any((c in chars) for c in spec_test[0]):
                     spec_err.set('Spectral class error! Format: F0 or A')
-                if len(spec_test) > 1:
+                if len(spec_test) > 1:  # If there's more than just the spectral class, check if the second digit is int
                     int(spec_test[1])
             except:
                 spec_err.set('Spectral class error! Format: F0 or A')
@@ -77,19 +77,18 @@ def save_db(root, name_t, ra_t, dec_t):
         elif spec['state'] == 'disabled':
             spec_err.set('')
 
-        if all(error.get() == '' for error in errors):
-            if tkMessageBox.askyesno("Confirm Save", "Are you sure?"):
-                # Zubenelgenubi,f|S|A3,14 50 52.7773|-105.69,-16 02 29.798|-69.00,2.75,2000,0
+        if all(error.get() == '' for error in errors):  # Check if all error messages are blank
+            if tkMessageBox.askyesno("Confirm Save", "Are you sure?"):  # Final confirmation for adding user object
                 # Write to custom object database
                 ra = ' '.join([r.get() for r in ra_t])
                 dec = ' '.join([de.get() for de in dec_t])
                 with open('objects.txt', 'a') as f:
                     print name.get()+',f|'+subtype[obj_type.get()]+'|'+spec.get()+','+ra+','+dec+','+mag.get()+',2000,0\n'
                     f.write(name.get()+',f|'+subtype[obj_type.get()]+'|'+spec.get()+','+ra+','+dec+','+mag.get()+',2000,0\n')
-                log_action('SAVE Custom', name.get(), str('RA: '+ra+' | DEC: '+dec))
-                time.sleep(1)
-            d.destroy()
-        else:
+                log_action('SAVE Custom', name.get(), str('RA: '+ra+' | DEC: '+dec))  # Log action
+                time.sleep(1)  # Pause for a second to prevent double saves
+            d.destroy()  # Close save dialog window
+        else:  # If there are errors, display them in a popup windown telling them what they did wrong
             error_popup = tk.Toplevel(d)
             error_popup.title('Error Message')
             for err in errors:
@@ -97,7 +96,7 @@ def save_db(root, name_t, ra_t, dec_t):
                     tk.Label(error_popup, text=err.get(), fg='red').pack()
             center(error_popup)
 
-    def center(win):
+    def center(win):  # Center the popup windows
         win.update_idletasks()
         width = win.winfo_width()
         height = win.winfo_height()
@@ -105,7 +104,7 @@ def save_db(root, name_t, ra_t, dec_t):
         y = (win.winfo_screenheight() / 2) - (height / 2)
         win.geometry('+{}+{}'.format(x, y))
 
-    def log_action(action, event, details):
+    def log_action(action, event, details):  # Log actions taken into logfile for today
         now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         today = datetime.datetime.now().strftime('%Y-%m-%d')
         with open(today+'_ObservingLog.txt', 'a') as f:
@@ -135,7 +134,7 @@ def save_db(root, name_t, ra_t, dec_t):
     name.insert(0, name_t)
 
     ra_h = tk.Entry(ra, width=3, validate='key')
-    ra_h['validatecommand'] = (ra_h.register(validate), '%P', 3)
+    ra_h['validatecommand'] = (ra_h.register(validate), '%P', 3)  # Length check for entry boxes
     ra_h.insert(0, ra_t[0].get())
     ra_m = tk.Entry(ra, width=2, validate='key')
     ra_m['validatecommand'] = (ra_m.register(validate), '%P', 2)
