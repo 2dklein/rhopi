@@ -58,7 +58,9 @@ while 1 :
         while ra.inWaiting() > 0:
             ra_val += ra.read(1)
         if ra_val != '':
-            print "RA:", ra_val, ts.clean_str(ra_val)
+            print "RA:", ra_val, int(ts.clean_str(ra_val), 16)
+        else:
+            print 'RA encoder input error!'
 
         dec.write(input)
         time.sleep(0.2)
@@ -67,6 +69,8 @@ while 1 :
             dec_val += dec.read(1)
         if dec_val != '':
             print "DEC:", dec_val, ts.clean_str(dec_val)
+        else:
+            print 'DEC encoder input error!'
         # seconds -= 1
 
 ra.close()             # close port

@@ -32,3 +32,5 @@ def char_check(text):
             object_list.append('--None--')  # ...boxes display the text '--None--'
         i+=1  # Check next list length
     return object_list  # Send collected objects list back to GUI
+
+print hex(int('100000000', 2))
