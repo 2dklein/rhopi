@@ -15,18 +15,23 @@ def send_to_enc(full):
             if len(response) == 0:
                 i += 1
             else:
-                fullcomm.set(response)
+                fullcomm.set('Success')
                 error['fg'] = 'blue'
                 break
             if i == 5:
                 fullcomm.set('Encoder not responding')
                 error['fg'] = 'red'
+        print "RA:", response
+        ra_val = response.split(' ')
+        ra_tick = int(ra_val[2], 16)
+        print "val >>", ra_tick
+        print "bin >>", bin(ra_tick)
+        # print "int >>", int(ra_tick, 16)
     if dece.get():
         dec = serial.Serial(port='/dev/DECencoder', baudrate=230400, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE,
             bytesize=serial.EIGHTBITS, xonxoff=serial.XOFF, dsrdtr=False, rtscts=False, timeout=1)
         dec.write(full+'\r\n')
         i=0
-        print full
         while i < 5:
             time.sleep(0.005)
             response = dec.read(27)
@@ -39,6 +44,11 @@ def send_to_enc(full):
             if i == 5:
                 fullcomm.set('Encoder not responding')
                 error['fg'] = 'red'
+        print "DEC:", response
+        dec_val = response.split(' ')
+        dec_tick = int(dec_val[2], 16)
+        print "val >>", dec_tick
+        print "bin >>", bin(dec_tick)
     else:
         fullcomm.set('One encoder needs to be selected')
         error['fg'] = 'red'
@@ -56,7 +66,7 @@ def check_comm():
     try:
         hex(int(val, 2))
     except:
-        print val
+        print "Value Error"
         fullcomm.set('Value must be in binary')
         error['fg'] = 'red'
         write['state'] = 'disabled'
@@ -71,7 +81,10 @@ def create_comm(rw):
     check_comm()
     # print 'yes'
     if fullcomm.get() != 'Value must be in binary':
-        send_to_enc(rw+fullcomm.get())
+        if rw is 'R':
+            send_to_enc(rw+fullcomm.get()+'0')
+        else:
+            send_to_enc(rw+fullcomm.get())
         # print 'success'
 
 

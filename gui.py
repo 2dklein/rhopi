@@ -8,6 +8,9 @@ from db import save_db
 import tkMessageBox
 import talkserialtome as ts
 
+ra_slope = -102.133333333
+dec_slope = -204.671666667
+
 
 # This function updates the local and sidereal times
 def display_time_now(event):
@@ -49,15 +52,34 @@ def auto_fill(entry_box, text_box):
 
 # Align function. Pulls RA and DEC from encoders
 def confirm_align(name, ra, dec):
-    log_action('Aligned', name.get(), str('RA: '+ra.get()+' | DEC: '+dec.get()))
     result = tkMessageBox.askyesno("Align Telescope", "Are you sure?")
     if result is True:
-        s_scope.config(fg='black')
         # Pull current tick counts
-        print ts.get_ra(), ts.get_dec()
-        # if error -> display error and log it
-        # else -> Save current ticks as angle [rad] = Scale*Tick + Offset
-        return
+        # print ts.get_ra(), ts.get_dec()
+        try:
+            ts.get_ra()
+            ts.get_dec()
+        except:
+            log_action('Align', 'Failed', 'Encoder not found')
+            tkMessageBox.Message('Align Failed: Encoder(s) not found! Try again dummy :P')
+        else:
+            log_action('Align Success', name.get(), str('HA: '+o_ha.get()+' | DEC: '+o_dec.get()))
+            tick_ra = ts.get_ra()
+            tick_dec = ts.get_dec()
+            now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            with open('TickData.txt', 'a') as f:  # Append the data
+                f.write(now+'\t'+str(tick_ra)+'\t'+o_ha.get()+'\t'+str(tick_dec)+'\t'+o_dec.get()+'\t'+name.get()+'\n')
+
+            # Set the ra_tick offset to the hour angle of object
+            if tick_ra > 2000000:
+                tick_ra =- 4294967295
+            print tick_ra, ra_slope, 'degs:', tick_ra/ra_slope
+            ra_deg = ephem.degrees(tick_ra/ra_slope) # [tick]/[ticks/degrees] = [degrees]
+            ra_offset = ra_deg - ephem.hours(o_ha.get())
+            # ra_offset is applied to all other RA calls to find the correct position
+            s_ready.set('Telescope Aligned')
+            s_scope.config(fg='black')
+            # else -> Save current ticks as angle [rad] = Scale*Tick + Offset
     else:
         # Do nothing
         return

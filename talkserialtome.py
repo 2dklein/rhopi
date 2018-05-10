@@ -32,7 +32,7 @@ def get_ra():
 #        print "bin >>", bin(int(ra_val, 16))
 #        print "int >>", int(ra_val, 16)
     ra.close()
-    return ra_tick
+    return ra_tick+1000000
 
 def get_dec():
     dec = serial.Serial(
@@ -60,7 +60,7 @@ def get_dec():
 #        print "bin >>", bin(int(ra_val, 16))
 #        print "int >>", int(ra_val, 16)
     dec.close()
-    return dec_tick
+    return dec_tick+1000000
 
 #ra = serial.Serial(
 #    port='/dev/RAencoder',
