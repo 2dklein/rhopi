@@ -16,7 +16,7 @@ def get_ra():
         xonxoff=serial.XOFF,
         dsrdtr=False,
         rtscts=False,
-        timeout=None
+        timeout=1
         )
 
     ra.write("R0E00\r\n")
@@ -32,7 +32,7 @@ def get_ra():
 #        print "bin >>", bin(int(ra_val, 16))
 #        print "int >>", int(ra_val, 16)
     ra.close()
-    return ra_tick+1000000
+    return ra_tick
 
 def get_dec():
     dec = serial.Serial(
@@ -44,7 +44,7 @@ def get_dec():
         xonxoff=serial.XOFF,
         dsrdtr=False,
         rtscts=False,
-        timeout=None
+        timeout=1
         )
 
     dec.write("R0E00\r\n")
@@ -60,7 +60,7 @@ def get_dec():
 #        print "bin >>", bin(int(ra_val, 16))
 #        print "int >>", int(ra_val, 16)
     dec.close()
-    return dec_tick+1000000
+    return dec_tick
 
 #ra = serial.Serial(
 #    port='/dev/RAencoder',

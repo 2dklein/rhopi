@@ -1,14 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed May  2 14:55:07 2018
-
-@author: pi
-"""
-
-
 import serial, time
-import talkserialtome as ts
-
 
 ra = serial.Serial(
     port='/dev/RAencoder',
@@ -19,8 +10,9 @@ ra = serial.Serial(
     xonxoff=serial.XOFF,
     dsrdtr=False,
     rtscts=False,
-    timeout=1
+    timeout=None
 )
+
 dec = serial.Serial(
     port='/dev/DECencoder',
     baudrate=230400,
@@ -30,7 +22,7 @@ dec = serial.Serial(
     xonxoff=serial.XOFF,
     dsrdtr=False,
     rtscts=False,
-    timeout=1
+    timeout=None
 )
 
 buffer_size = 27

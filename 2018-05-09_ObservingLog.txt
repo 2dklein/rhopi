@@ -1,0 +1,69 @@
+2018-05-09 18:07:38 - GET Planet/Moon | Pluto | HA: -11:43:35.05
+2018-05-09 18:07:39 - Aligned | Pluto | RA: 19:31:32.48 | DEC: -21:29:57.4
+2018-05-09 18:09:04 - GET Planet/Moon | Pluto | HA: -11:42:08.81
+2018-05-09 18:09:08 - Aligned | Pluto | RA: 19:31:32.48 | DEC: -21:29:57.4
+2018-05-09 18:11:48 - GET Planet/Moon | Pluto | HA: -11:39:24.36
+2018-05-09 18:11:50 - Aligned | Pluto | RA: 19:31:32.47 | DEC: -21:29:57.4
+2018-05-09 18:11:51 - Align Success | Pluto | RA: 19:31:32.47 | DEC: -21:29:57.4
+2018-05-09 18:38:54 - USE Custom | test1 | RA: 6 0 0 | DEC: 90 0 0
+2018-05-09 18:38:54 - GET Custom | test1 | HA: -3:45:36.56
+2018-05-09 18:38:57 - Aligned | test1 | RA: 12:04:55.13 | DEC: 89:54:13.0
+2018-05-09 18:38:59 - Align Success | test1 | RA: 12:04:55.13 | DEC: 89:54:13.0
+2018-05-09 18:41:34 - USE Custom | test1 | RA: 6 0 0 | DEC: 90 0 0
+2018-05-09 18:41:34 - GET Custom | test1 | HA: -3:42:56.11
+2018-05-09 18:41:42 - Aligned | test1 | RA: 12:04:55.11 | DEC: 89:54:13.0
+2018-05-09 18:41:43 - Align Success | test1 | RA: 12:04:55.11 | DEC: 89:54:13.0
+2018-05-09 18:43:02 - USE Custom | ra2 | RA: 5 0 0 | DEC: 90 0 0
+2018-05-09 18:43:02 - GET Custom | ra2 | HA: -3:41:27.86
+2018-05-09 18:43:04 - Aligned | ra2 | RA: 12:04:55.10 | DEC: 89:54:13.0
+2018-05-09 18:43:05 - Align Success | ra2 | RA: 12:04:55.10 | DEC: 89:54:13.0
+2018-05-09 18:43:35 - USE Custom | ra2 | RA: 5 0 0 | DEC: 90 0 0
+2018-05-09 18:43:35 - GET Custom | ra2 | HA: -3:40:54.76
+2018-05-09 18:43:47 - USE Custom | ra2 | RA: 8 0 0 | DEC: 90 0 0
+2018-05-09 18:43:47 - GET Custom | ra2 | HA: -3:40:42.73
+2018-05-09 18:43:57 - USE Custom | ra2 | RA: 8 0 0 | DEC: 5 0 0
+2018-05-09 18:43:57 - GET Custom | ra2 | HA: 0:23:25.49
+2018-05-09 18:44:08 - USE Custom | ra2 | RA: 5 0 0 | DEC: 90 0 0
+2018-05-09 18:44:08 - GET Custom | ra2 | HA: -3:40:21.67
+2018-05-09 18:44:24 - USE Custom | ra2 | RA: 5 0 0 | DEC: 80 0 0
+2018-05-09 18:44:24 - GET Custom | ra2 | HA: 3:21:47.57
+2018-05-09 18:44:43 - USE Custom | ra2 | RA: 5 0 0 | DEC: 70 0 0
+2018-05-09 18:44:43 - GET Custom | ra2 | HA: 3:23:11.99
+2018-05-09 18:44:47 - USE Custom | ra2 | RA: 6 0 0 | DEC: 70 0 0
+2018-05-09 18:44:47 - GET Custom | ra2 | HA: 2:23:13.60
+2018-05-09 18:44:49 - USE Custom | ra2 | RA: 7 0 0 | DEC: 70 0 0
+2018-05-09 18:44:49 - GET Custom | ra2 | HA: 1:23:17.52
+2018-05-09 18:45:08 - USE Custom | ra2 | RA: 7 0 0 | DEC: 80 0 0
+2018-05-09 18:45:08 - GET Custom | ra2 | HA: 1:22:31.10
+2018-05-09 18:45:12 - USE Custom | ra2 | RA: 6 0 0 | DEC: 80 0 0
+2018-05-09 18:45:12 - GET Custom | ra2 | HA: 2:22:30.94
+2018-05-09 18:45:18 - USE Custom | ra2 | RA: 6 0 0 | DEC: 90 0 0
+2018-05-09 18:45:18 - GET Custom | ra2 | HA: -3:39:11.47
+2018-05-09 18:45:32 - USE Custom | ra2 | RA: 6 0 0 | DEC: 89 0 0
+2018-05-09 18:45:32 - GET Custom | ra2 | HA: 2:02:58.85
+2018-05-09 18:45:45 - USE Custom | ra2 | RA: 5 0 0 | DEC: 89 0 0
+2018-05-09 18:45:45 - GET Custom | ra2 | HA: 3:03:30.30
+2018-05-09 18:46:04 - USE Custom | ra2 | RA: 5 0 0 | DEC: 75 0 0
+2018-05-09 18:46:04 - GET Custom | ra2 | HA: 3:24:11.20
+2018-05-09 22:23:24 - GET Named Star | Taygeta | HA: 8:18:09.54
+2018-05-09 22:23:28 - Aligned | Taygeta | RA: 3:46:15.91 | DEC: 24:31:13.5
+2018-05-09 22:23:29 - Align Success | Taygeta | RA: 8:18:09.54 | DEC: 24:31:13.5
+2018-05-09 22:24:39 - GET Planet/Moon | Tethys | HA: -6:32:14.41
+2018-05-09 22:24:45 - Align | Failed | Encoder not found
+2018-05-09 22:25:36 - GET Planet/Moon | Jupiter | HA: -2:57:52.48
+2018-05-09 22:25:38 - Align | Failed | Encoder not found
+2018-05-09 22:26:27 - Align | Failed | Encoder not found
+2018-05-09 22:45:56 - GET Named Star | Regulus | HA: 2:17:40.82
+2018-05-09 22:46:01 - Align Success | Regulus | HA: 2:17:40.82 | DEC: 11:52:37.6
+2018-05-09 22:48:12 - GET Named Star | Tarazed | HA: -7:17:50.17
+2018-05-09 22:48:14 - Align Success | Tarazed | HA: -7:17:50.17 | DEC: 10:39:27.1
+2018-05-09 22:49:06 - GET Named Star | Tarazed | HA: -7:16:56.03
+2018-05-09 22:49:08 - Align Success | Tarazed | HA: -7:16:56.03 | DEC: 10:39:27.1
+2018-05-09 22:51:00 - GET Named Star | Rasalgethi | HA: -4:43:23.57
+2018-05-09 22:51:02 - Align Success | Rasalgethi | HA: -4:43:23.57 | DEC: 14:22:13.2
+2018-05-09 22:51:33 - GET Named Star | Regulus | HA: 2:23:18.74
+2018-05-09 22:51:35 - Align Success | Regulus | HA: 2:23:18.74 | DEC: 11:52:37.6
+2018-05-09 22:52:37 - GET Named Star | Electra | HA: 8:47:47.49
+2018-05-09 22:52:40 - Align Success | Electra | HA: 8:47:47.49 | DEC: 24:09:58.8
+2018-05-09 23:35:33 - GET Named Star | Rasalhague | HA: -4:19:01.17
+2018-05-09 23:35:37 - Align Success | Rasalhague | HA: -4:19:01.17 | DEC: 12:32:53.3
