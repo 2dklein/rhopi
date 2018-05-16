@@ -252,6 +252,8 @@ o.grid(column=1, row=0, sticky='N')
 s = tk.Frame(root)  # s is for information section widgets
 s.grid(column=2, row=0, sticky='N')
 
+offset = [tk.StringVar(s), tk.StringVar(s)]
+
 
 # --- All widget initializations and names --- #
 

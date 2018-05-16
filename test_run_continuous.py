@@ -10,7 +10,7 @@ ra = serial.Serial(
     xonxoff=serial.XOFF,
     dsrdtr=False,
     rtscts=False,
-    timeout=None
+    timeout=0.005
 )
 
 dec = serial.Serial(
@@ -22,34 +22,29 @@ dec = serial.Serial(
     xonxoff=serial.XOFF,
     dsrdtr=False,
     rtscts=False,
-    timeout=None
+    timeout=0.005
 )
-
-buffer_size = 27
-five_ms = 0.005
-max_tries = 5
-close_req = False
 
 
 def sendQsbInstruction(qsbCommand):
     ioResult = ra.write(qsbCommand+"\r\n")
-    if ioResult < 0:
+    if ioResult < 1:
         print "Error writing to QSB device"
 
 def readQsbResponse():
     i = 0
     ioResult = ''
-    while True:
-        ioResult += ra.read(27)
-        time.sleep(five_ms)
+    while ra.inWaiting() > 0:
+        ioResult += ra.read(16)
+        time.sleep(0.005)
         i += 1
-        if len(ioResult) > 0 and i < max_tries:
+        if len(ioResult) > 0 and i < 5:
+            print i
             break
-        if i == max_tries:
+        if i == 5:
             print "Error reading from QSB device"
             break
-
-    return ioResult.replace("\r\n", "")
+    return ioResult
 
 
 def qsbCommand(command):
@@ -57,21 +52,24 @@ def qsbCommand(command):
     return readQsbResponse()
 
 
-
 def main():
-    # Open the port
-    qsb = ra.isOpen()
-    if qsb < 0:
-        print "Error opening QSB device"
+    close_req = False
+    while not close_req:
+        # Open the port
+        qsb = ra.isOpen()
+        if qsb < 0:
+            print "Error opening QSB device"
 
-    #command = raw_input("S:\> ")
-    #if command == 'exit':
-        #close = True
-        #ra.close()
-        #exit()
+        command = raw_input("S:\> ")
+        if command == 'exit':
+            close_req = True
+            ra.close()
+            exit()
+        else:
+            print qsbCommand(command)
 
-    # Print product info
-    # qsbCommand("R14")
-    print "Current count:", qsbCommand("R0E")
+        # Print product info
+        # qsbCommand("R14")
+        #print "Current count:", qsbCommand("R0E")
 
 main()
