@@ -16,7 +16,7 @@ def get_ra():
         xonxoff=serial.XOFF,
         dsrdtr=False,
         rtscts=False,
-        timeout=0.005
+        timeout=None
         )
 
     ra.write("R0E00\r\n")
@@ -44,7 +44,7 @@ def get_dec():
         xonxoff=serial.XOFF,
         dsrdtr=False,
         rtscts=False,
-        timeout=0.005
+        timeout=None
         )
 
     dec.write("R0E00\r\n")

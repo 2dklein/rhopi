@@ -1,0 +1,19 @@
+2018-06-20 01:18:03 - GET Named Star | Fomalhaut | HA: -5:17:27.10
+2018-06-20 01:18:05 - Align Success | Fomalhaut | HA: 22:58:39.05 | DEC: -29:31:19.3
+2018-06-20 01:31:34 - GET Named Star | Polaris | HA: 15:01:10.61
+2018-06-20 11:24:08 - GET Named Star | Pollux | HA: -3:57:28.07
+2018-06-20 11:25:04 - GET Planet/Moon | Tethys | HA: -14:37:41.53
+2018-06-20 11:25:11 - GET Named Star | Pollux | HA: -3:56:24.90
+2018-06-20 11:25:28 - GET Named Star | Deneb | HA: -16:51:48.13
+2018-06-20 11:26:54 - GET Named Star | Pollux | HA: -3:54:41.62
+2018-06-20 11:32:32 - GET Named Star | Pollux | HA: -3:49:02.69
+2018-06-20 11:32:35 - Align Success | Pollux | HA: 7:46:24.59 | DEC: 27:58:50.5
+2018-06-20 11:33:46 - GET Named Star | Deneb | HA: -16:43:28.77
+2018-06-20 11:33:50 - Align Success | Deneb | HA: 20:42:04.87 | DEC: 45:20:40.4
+2018-06-20 11:38:05 - Track Object | Deneb | Tracking Started
+2018-06-20 12:45:19 - GET Named Star | Pollux | HA: -2:36:03.73
+2018-06-20 12:45:23 - Align Success | Pollux | HA: 7:46:24.59 | DEC: 27:58:50.5
+2018-06-20 13:22:05 - GET Named Star | Pollux | HA: -1:59:11.70
+2018-06-20 13:22:08 - Align Success | Pollux | HA: 7:46:24.59 | DEC: 27:58:50.5
+2018-06-20 14:15:25 - GET Named Star | Regulus | HA: -3:28:38.18
+2018-06-20 14:15:27 - Align Success | Regulus | HA: 10:09:19.83 | DEC: 11:52:40.2

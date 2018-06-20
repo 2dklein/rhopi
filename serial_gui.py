@@ -5,7 +5,7 @@ import Tkinter as tk
 def send_to_enc(full):
     if rae.get():
         ra = serial.Serial(port='/dev/RAencoder', baudrate=230400, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE,
-            bytesize=serial.EIGHTBITS, xonxoff=serial.XOFF, dsrdtr=False, rtscts=False, timeout=0.1)
+            bytesize=serial.EIGHTBITS, xonxoff=serial.XOFF, dsrdtr=False, rtscts=False, timeout=1)
         ra.write(full+'\r\n')
         i = 0
         print full
@@ -21,15 +21,15 @@ def send_to_enc(full):
             if i == 5:
                 fullcomm.set('Encoder not responding')
                 error['fg'] = 'red'
-        print "RA:", response.replace('\r\n', '')
+        print "RA:", response
         ra_val = response.split(' ')
         ra_tick = int(ra_val[2], 16)
-        print "val :", ra_tick
-        print "bin :", bin(ra_tick).replace('0b', ''), '\n'
+        print "val >>", ra_tick
+        print "bin >>", bin(ra_tick)
         # print "int >>", int(ra_tick, 16)
     if dece.get():
         dec = serial.Serial(port='/dev/DECencoder', baudrate=230400, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE,
-            bytesize=serial.EIGHTBITS, xonxoff=serial.XOFF, dsrdtr=False, rtscts=False, timeout=0.1)
+            bytesize=serial.EIGHTBITS, xonxoff=serial.XOFF, dsrdtr=False, rtscts=False, timeout=1)
         dec.write(full+'\r\n')
         i=0
         while i < 5:
@@ -44,11 +44,11 @@ def send_to_enc(full):
             if i == 5:
                 fullcomm.set('Encoder not responding')
                 error['fg'] = 'red'
-        print "DEC:", response.replace('\r\n', '')
+        print "DEC:", response
         dec_val = response.split(' ')
         dec_tick = int(dec_val[2], 16)
-        print "val :", dec_tick
-        print "bin :", bin(dec_tick).replace('0b', ''), '\n'
+        print "val >>", dec_tick
+        print "bin >>", bin(dec_tick)
     else:
         fullcomm.set('One encoder needs to be selected')
         error['fg'] = 'red'
